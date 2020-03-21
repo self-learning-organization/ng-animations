@@ -10,7 +10,7 @@ import { trigger, state, style } from '@angular/animations';
         'background-color': 'red',
         transform: 'translateX(0)' 
       })),
-      state('hightlighted', style({
+      state('highlighted', style({
         backgroundColor: 'blue',
         transform: 'translateX(100px)'
       }))
@@ -23,5 +23,13 @@ export class AppComponent {
 
     onAdd(item) {
       this.list.push(item);
+    }
+
+    onAnimate() {
+      this.state == 'normal' ? this.state = 'highlighted' : this.state = 'normal';
+    }
+
+    onShrink() {
+      
     }
 }
